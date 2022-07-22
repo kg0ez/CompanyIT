@@ -1,28 +1,27 @@
 ﻿<Properties StartupConfiguration="{35C0BD91-6B83-496D-9A83-9F3D291C6EDF}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Company PreferredExecutionTarget="/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Company PreferredExecutionTarget="/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Company/Models/ApplicationContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Company/Controllers/HomeController.cs">
     <Files>
-      <File FileName="Company/Controllers/HomeController.cs" Line="18" Column="1" />
-      <File FileName="Company/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
-      <File FileName="Company/Program.cs" Line="1" Column="1" />
-      <File FileName="Company/appsettings.json" Line="8" Column="1" />
-      <File FileName="Company/Models/DatabaseModels/Company.cs" Line="13" Column="44" />
-      <File FileName="Company/Models/DatabaseModels/Course.cs" Line="15" Column="46" />
-      <File FileName="Company/Models/DatabaseModels/Student.cs" Line="18" Column="1" />
-      <File FileName="Company/Models/DatabaseModels/StudentPerformance.cs" Line="17" Column="38" />
-      <File FileName="Company/Models/DatabaseModels/User.cs" Line="20" Column="3" />
-      <File FileName="Company/Models/DatabaseModels/AboutEmployees.cs" Line="20" Column="1" />
-      <File FileName="Company/Models/DatabaseModels/AboutCompany.cs" Line="14" Column="13" />
-      <File FileName="Company/Models/DatabaseModels/Rialto.cs" Line="13" Column="37" />
-      <File FileName="Company/Models/DatabaseModels/Product.cs" Line="15" Column="40" />
-      <File FileName="Company/Models/DatabaseModels/Customer.cs" Line="7" Column="3" />
-      <File FileName="Company/Models/ApplicationContext.cs" Line="21" Column="3" />
+      <File FileName="Company/Models/ApplicationContext.cs" Line="22" Column="10" />
+      <File FileName="Company/Models/DatabaseModels/Company.cs" Line="15" Column="36" />
+      <File FileName="Company/Models/DatabaseModels/AboutCompany.cs" Line="13" Column="43" />
+      <File FileName="Company/Models/DatabaseModels/Rialto.cs" Line="13" Column="17" />
+      <File FileName="Company/Controllers/HomeController.cs" Line="14" Column="1" />
+      <File FileName="Company/Views/Home/Index.cshtml" Line="3" Column="44" />
+      <File FileName="Company/Views/Home/Edit.cshtml" Line="15" Column="67" />
+      <File FileName="Company/Views/Home/Create.cshtml" Line="2" Column="1" />
+      <File FileName="Company/Models/DatabaseModels/Customer.cs" Line="1" Column="14" />
+      <File FileName="Company/Models/DatabaseModels/AboutEmployees.cs" Line="1" Column="1" />
+      <File FileName="Company/Models/DatabaseModels/Student.cs" Line="1" Column="1" />
+      <File FileName="Company/Models/DatabaseModels/StudentPerformance.cs" Line="1" Column="1" />
+      <File FileName="Company/Models/DatabaseModels/Course.cs" Line="1" Column="1" />
+      <File FileName="Company/Models/DatabaseModels/User.cs" Line="1" Column="1" />
+      <File FileName="Company/Models/DatabaseModels/Product.cs" Line="1" Column="1" />
+      <File FileName="Company/Models/DatabaseModels/VisitHistory.cs" Line="7" Column="37" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -31,6 +30,7 @@
             <Node name="Company" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="Controllers" expanded="True" />
+              <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True">
                 <Node name="DatabaseModels" expanded="True" />
               </Node>
@@ -48,4 +48,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

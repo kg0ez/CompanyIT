@@ -1,9 +1,22 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<Company.Models.DatabaseModels.Company>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-
+<p><a asp-action="Create">Добавить компанию</a></p>
+<table class="table">
+    <tr><th>Commpany</th><th>Стоимоть компании</th><th>Количество сотрудников</th><th></th><th></th></tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.AboutCompany.Value</td>
+            <td>@item.AboutCompany.NumberEmployees</td>
+            <td>
+                <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id">Изменить</a>
+            </td>
+            <td>
+                <form asp-controller="Home" asp-action="Delete" method="post" asp-route-id="@item.Id">
+                    <input type="submit" value="Удалить" />
+                </form>
+            </td>
+        </tr>
+    }
+</table>
