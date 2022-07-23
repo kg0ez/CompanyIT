@@ -1,16 +1,14 @@
-﻿using System;
-using Company.Models.DatabaseModels;
+﻿using Company.Models.DatabaseModels;
 using Microsoft.EntityFrameworkCore;
 
 namespace Company.Models
 {
 	public class ApplicationContext:DbContext
 	{
+		public ApplicationContext() { }
 		public ApplicationContext(DbContextOptions<ApplicationContext> options)
-		   : base(options)
-		{
+		   : base(options)=>
 			Database.EnsureCreated();
-		}
 		
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
@@ -38,16 +36,18 @@ namespace Company.Models
 				.HasOne(u => u.Rialto)
 				.WithOne(c => c.Company)
 				.HasForeignKey<Rialto>(p => p.RialtoForeignKey);
-			modelBuilder.Entity<Customer>().HasData(
-				new VisitHistory() { Name = "Kirill", Date = DateTime.Now }
-			);
-			DatabaseModels.Company microsoft = new DatabaseModels.Company { Id = 7, Name = "Microsoft" };
-			Product product = new Product { Id = 10, Name = "Dota", Description = "xz", CompanyId = 7, Company = microsoft };
-			Customer customer = new Customer { Id = 10, Name = "People", ProductId=10,Product=product};
-			modelBuilder.Entity<DatabaseModels.Company>().HasData(microsoft);
-			modelBuilder.Entity<Product>().HasData(product);
-			modelBuilder.Entity<Customer>().HasData(customer);
-		}
+
+            DatabaseModels.Company microsoft = new DatabaseModels.Company { Id = 7, Name = "Microsoft" };
+            Product product = new Product { Id = 10, Name = "Dota", Description = "xz", CompanyId = 7, Company = microsoft };
+            Customer customer = new Customer { Id = 10, Name = "People", ProductId = 10, Product = product };
+
+            modelBuilder.Entity<DatabaseModels.Company>().HasData(microsoft);
+            modelBuilder.Entity<Product>().HasData(product);
+            modelBuilder.Entity<Customer>().HasData(customer);
+            modelBuilder.Entity<VisitHistory>().HasData(
+				new VisitHistory { Id=1, Name = "kirill", Date = DateTime.Now }
+				);
+        }
 		public DbSet<User> Users { get; set; } = null!;
 		public DbSet<AboutEmployees> AboutEmployees  { get; set; } = null!;
 		public DbSet<Product> Products  { get; set; } = null!;
