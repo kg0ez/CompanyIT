@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Company.Models.DatabaseModels.Rialto>
+
+<h2>Акции</h2>
+<table class="table">
+    <tr><th>Количество</th><th>Стоимоть</th><th>Компания</th>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.NumberShares</td>
+            <td>@item.Cost</td>
+            <td>@item.Company.Name</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,23 @@
+﻿@model Company.Models.DatabaseModels.Company
+
+<h2>Редактирование пользователя</h2>
+<form asp-action="edit" asp-controller="home" asp-route-id="@Model.Id">
+    <p>
+        <label asp-for="Name">Имя</label><br />
+        <input type="text" asp-for="Name" />
+    </p>
+    <p>
+        <label asp-for="AboutCompany.Value">Стоимость</label><br />
+        <input type="number" asp-for="AboutCompany.Value" />
+    </p>
+    <p>
+        <label asp-for="AboutCompany.NumberEmployees">Кол сотрудников</label><br />
+        <input type="number" asp-for="AboutCompany.NumberEmployees" />
+    </p>
+    <p>
+        <input type"number" style="display:none" asp-for="AboutCompany.Id"/>
+    </p>
+    <p>
+        <input type="submit" value="Сохранить" />
+    </p>
+</form>

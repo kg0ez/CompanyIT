@@ -1,0 +1,21 @@
+﻿@model Company.Models.DatabaseModels.Company
+
+<h2>Добавление компанию</h2>
+<form asp-action="create" asp-controller="home">
+    <p>
+        <label asp-for="Name">Название компании</label><br />
+        <input type="text" asp-for="Name" />
+    </p>
+    <p>
+        <label asp-for="AboutCompany.Value">Стоимоть</label><br />
+        <input type="number" asp-for="AboutCompany.Value" />
+    </p>
+    <p>
+        <label asp-for="AboutCompany.NumberEmployees">Сотрудники</label><br />
+        <input type="number" asp-for="AboutCompany.NumberEmployees" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
+

@@ -1,0 +1,41 @@
+﻿@model Company.Models.DatabaseModels.AboutEmployees
+
+<h2>Добавление пользователя</h2>
+<form asp-action="create" asp-controller="user">
+    <p>
+        <label asp-for="User.Surname">Surname</label><br />
+        <input type="text" asp-for="User.Surname" />
+    </p>
+    <p>
+        <label asp-for="User.Name">Name</label><br />
+        <input type="text" asp-for="User.Name" />
+    </p>
+    <p>
+        <label asp-for="User.Patronymic">Patronymic</label><br />
+        <input type="text" asp-for="User.Patronymic" />
+    </p>
+    <p>
+        <label asp-for="User.CompanyId">Id</label><br />
+        <input type="text" asp-for="User.CompanyId" />
+    </p>
+    <p>
+        <label asp-for="User.Phone">Phone</label><br />
+        <input type="text" asp-for="User.Phone" />
+    </p>
+    <p>
+        <label asp-for="Street">Street</label><br />
+        <input type="text" asp-for="Street" />
+    </p>
+    <p>
+        <label asp-for="Home">Home</label><br />
+        <input type="text" asp-for="Home" />
+    </p>
+    <p>
+        <label asp-for="Apartment">Apart</label><br />
+        <input type="text" asp-for="Apartment" />
+    </p>
+    <p>
+        <input type="submit" value="Отправить" />
+    </p>
+</form>
+

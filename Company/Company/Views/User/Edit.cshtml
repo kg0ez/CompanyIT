@@ -1,0 +1,44 @@
+﻿@model Company.Models.DatabaseModels.AboutEmployees
+
+<h2>Редактирование пользователя</h2>
+<form asp-action="edit" asp-controller="user" asp-route-id="@Model.Id">
+    <p>
+        <label asp-for="User.Surname">Surname</label><br />
+        <input type="text" asp-for="User.Surname" />
+    </p>
+    <p>
+        <label asp-for="User.Name">Name</label><br />
+        <input type="text" asp-for="User.Name" />
+    </p>
+    <p>
+        <label asp-for="User.Patronymic">Patronymic</label><br />
+        <input type="text" asp-for="User.Patronymic" />
+    </p>
+    <p>
+        <label asp-for="User.Phone">Phone</label><br />
+        <input type="text" asp-for="User.Phone" />
+    </p>
+    <p>
+        <label asp-for="Street">Street</label><br />
+        <input type="text" asp-for="Street" />
+    </p>
+    <p>
+        <label asp-for="Home">Home</label><br />
+        <input type="text" asp-for="Home" />
+    </p>
+    <p>
+        <label asp-for="Apartment">Apart</label><br />
+        <input type="text" asp-for="Apartment" />
+    </p>
+
+    @*<p>
+        <input type="text" style="display:none" asp-for="User.CompanyId" />
+    </p>
+    <p>
+        <input type"number" style="display:none" asp-for="Id" />
+    </p>*@
+    <p>
+        <input type="submit" value="Сохранить" />
+    </p>
+</form>
+
